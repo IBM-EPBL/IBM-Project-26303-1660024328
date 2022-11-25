@@ -249,7 +249,8 @@ def addexpense():
         s = temp[0]
 
     if total > int(s):
-        msg = "Hello " + session['username'] + " , " + "you have crossed the monthly limit of Rs. " + str(s) + "/- !!!" + "\n" + "Thank you, " + "\n" + "Team Personal Expense Tracker."  
+        msg = "<h1>Hello " + session['username'] + " , " + "you have crossed the monthly limit of Rs. " + str(s) + "/- !!!" + "\n" + "Thank you, " + "\n" + "Team Personal Expense Tracker</h1>"  
+        sendemail(msg,session['email'])
          
     
     return redirect("/display")
